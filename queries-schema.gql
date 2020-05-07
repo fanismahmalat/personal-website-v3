@@ -18,14 +18,69 @@ query MyQuery {
   }
 }
 
-# Homepage Hero
+# Heroes
 query MyQuery {
-  allContentfulHomepageHero {
+  allContentfulHeroes {
     edges {
       node {
+        identifier
         body {
           body
         }
+      }
+    }
+  }
+}
+
+# Call to actions
+query MyQuery {
+  allContentfulCallToActions {
+    edges {
+      node {
+        identifier
+        headline
+        body {
+          body
+        }
+      }
+    }
+  }
+}
+
+# Projects
+query MyQuery {
+  allContentfulProjects {
+    edges {
+      node {
+        title
+        description {
+          description
+        }
+        featured_image {
+          fluid {
+            srcSet
+          }
+        }
+        case_study_images {
+          fluid {
+            srcSet
+          }
+        }
+      }
+    }
+  }
+}
+
+# Social media
+query MyQuery {
+  allContentfulSocialMedia {
+    edges {
+      node {
+        identifier
+        body {
+          body
+        }
+        account_username
       }
     }
   }
