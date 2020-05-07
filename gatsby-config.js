@@ -6,7 +6,7 @@ module.exports = {
   pathPrefix: `/gatsby/public/`,
   siteMetadata: {
     title: `Fanis Mahmalat - Web Developer`,
-    description: `Portfolio website showcasing development work `,
+    description: `Portfolio website showcasing development work`,
     author: `Fanis Mahmalat <fanismahmalat@gmail.com>`,
   },
   plugins: [
