@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   pathPrefix: `/gatsby/public/`,
   siteMetadata: {
@@ -29,5 +33,12 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `g64lvbo1m1ge`,
+        accessToken: process.env.CONTENTFUL_TOKEN_ID,
+      },
+    },
   ],
 }

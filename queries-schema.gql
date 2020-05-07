@@ -1,0 +1,32 @@
+# Blog posts
+query MyQuery {
+  allContentfulBlogPosts {
+    edges {
+      node {
+        title
+        featured_image {
+          fluid {
+            srcSet
+          }
+        }
+        body {
+          body
+        }
+        createdAt(formatString: "DD MMM YYYY")
+      }
+    }
+  }
+}
+
+# Homepage Hero
+query MyQuery {
+  allContentfulHomepageHero {
+    edges {
+      node {
+        body {
+          body
+        }
+      }
+    }
+  }
+}
