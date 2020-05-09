@@ -10,7 +10,8 @@
 @import "2-base/_typography";
 
 // Components
-// @import "3-components/";
+@import "3-components/_header";
+@import "3-components/_sideMenu";
 
 // Pages
 @import "4-pages/_index";
