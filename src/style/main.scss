@@ -1,8 +1,16 @@
 /* MAIN STYLES FILE */
 
-html {
-  background-color: white;
-  p {
-    color: black;
-  }
-}
+// Utilities
+@import "1-utilities/_variables";
+@import "1-utilities/_functions";
+@import "1-utilities/_mixins";
+
+// Base
+@import "2-base/_reset";
+@import "2-base/_typography";
+
+// Components
+// @import "3-components/";
+
+// Pages
+@import "4-pages/_index";

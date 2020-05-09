@@ -1,55 +1,43 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from "react";
+import PropTypes from "prop-types";
+import { Helmet } from "react-helmet";
+import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
-import React from "react"
-import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
-
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
+function SEO({ lang, meta, pageTitle, pageDescription, pageImage }) {
+  const {
+    siteTitle,
+    siteDescription,
+    siteAuthor,
+    siteLogoDark,
+  } = useSiteMetadata();
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={pageTitle}
+      titleTemplate={`%s | ${siteTitle}`}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: siteDescription,
         },
         {
           property: `og:title`,
-          content: title,
+          content: pageTitle || siteTitle,
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: pageDescription || siteDescription,
         },
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: pageImage || siteLogoDark,
         },
         {
           name: `twitter:card`,
@@ -57,32 +45,32 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: siteAuthor,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: pageTitle || siteTitle,
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: pageDescription || siteDescription,
         },
       ].concat(meta)}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
-}
+};
 
 SEO.propTypes = {
-  description: PropTypes.string,
+  siteDescription: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-}
+  pageTitle: PropTypes.string.isRequired,
+};
 
-export default SEO
+export default SEO;
