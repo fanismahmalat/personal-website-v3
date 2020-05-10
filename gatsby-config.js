@@ -8,8 +8,8 @@ module.exports = {
     siteTitle: `Fanis Mahmalat - Web Developer`,
     siteDescription: `Portfolio website showcasing development work`,
     siteAuthor: `Fanis Mahmalat <fanismahmalat@gmail.com>`,
-    siteLogoDark: `http://images.ctfassets.net/g64lvbo1m1ge/2SkiVvO7EHZvyNPKfUCko6/d675cfbee50a748e47a189fd68d0fdb2/logo_blue_version.png`,
-    siteLogoWhite: `http://images.ctfassets.net/g64lvbo1m1ge/1ZYwkPGO2g5Dx6X65uUx9v/989eb34fc1528c5f1e11643f73db2e29/logo_white_version.png`,
+    siteLogoDark: `https://images.ctfassets.net/g64lvbo1m1ge/2SkiVvO7EHZvyNPKfUCko6/d675cfbee50a748e47a189fd68d0fdb2/logo_blue_version.png`,
+    siteLogoWhite: `https://images.ctfassets.net/g64lvbo1m1ge/1ZYwkPGO2g5Dx6X65uUx9v/989eb34fc1528c5f1e11643f73db2e29/logo_white_version.png`,
   },
   plugins: [
     {
