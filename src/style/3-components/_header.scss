@@ -1,9 +1,9 @@
 header {
   height: 80px;
-  background-color: $white;
+  // background-color: $white;
 
   nav {
-    background-color: $white;
+    // background-color: $white;
     height: 100%;
     position: relative;
     z-index: 10;
@@ -63,7 +63,7 @@ header {
             a {
               border: 1px solid $blue;
               padding: 10px 10px;
-              color: $black;
+              color: $blue;
             }
 
             &:hover a {
@@ -83,6 +83,7 @@ header {
   width: 100%;
   height: 80px;
   z-index: 10;
+  background-color: $yellow;
 
   .wrapper {
     .logo {
@@ -101,17 +102,17 @@ header {
   }
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1450px) {
   header {
     nav {
       .wrapper {
-        margin: 0 10%;
+        margin: 0 5%;
       }
     }
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 850px) {
   header {
     height: 80px;
 
@@ -126,14 +127,14 @@ header {
         grid-template-columns: 1fr 1fr;
 
         .logo {
-          svg {
-            height: 50px;
+          img {
+            height: 30px;
           }
         }
 
         .sidebar-icon {
           display: inline-block;
-          grid-column: 3/4;
+          grid-column: 2/3;
         }
 
         .links-wrapper,

@@ -1,38 +1,57 @@
 .SideMenu {
   position: absolute;
   background-color: $yellow;
-  width: 250px;
+  width: 100%;
   height: 100vh;
   top: 0;
   z-index: 1;
   @include transition;
 
-  .links-wrapper {
-    .links {
-      color: $blue;
-      padding-top: 20px;
+  .close-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 1.4rem;
+    cursor: pointer;
 
-      .single-link {
-        padding: 10px 12%;
-      }
+    path {
+      color: $blue;
     }
   }
 
-  .cta {
-    margin-top: 20px;
-    margin-left: 12%;
-    display: inline-block;
-    padding: 0 !important;
+  .links-wrapper {
+    text-align: center;
+    height: 100%;
 
-    a {
-      border: 1px solid $blue;
-      padding: 10px 10px;
-      color: $black;
+    .links {
+      color: $blue;
+      margin-bottom: 20px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .single-link {
+        padding: 10px 12%;
+        margin-bottom: 20px;
+        text-align: center;
+      }
     }
 
-    &:hover a {
-      color: $white;
-      background-color: $blue;
+    .cta {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 0 !important;
+
+      a {
+        border: 1px solid $blue;
+        padding: 10px 10px;
+        color: $blue;
+      }
+
+      &:hover a {
+        color: $white;
+        background-color: $blue;
+      }
     }
   }
 }

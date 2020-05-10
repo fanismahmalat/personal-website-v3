@@ -4,12 +4,13 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
 import Header from "./Header/index";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, pageTitle }) => {
   const { siteTitle } = useSiteMetadata();
 
   return (
     <>
       <Header siteTitle={siteTitle} />
+      <main className={`page-${pageTitle}`}>{children}</main>
     </>
   );
 };

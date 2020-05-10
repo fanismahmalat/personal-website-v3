@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 
 const linkSyle = {
-  fontWeight: 500,
+  fontWeight: 600,
 };
 
 const NavLinks = ({ isSideMenuOpen }) => {

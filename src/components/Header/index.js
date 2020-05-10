@@ -30,7 +30,7 @@ const Header = () => {
   };
 
   return (
-    <header id="header">
+    <header id="header" data-sal="slide-up" data-sal-delay="150">
       <nav id="nav">
         <div className="wrapper">
           <Link to="/" className="logo">

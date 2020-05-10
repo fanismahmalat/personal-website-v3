@@ -18,8 +18,10 @@
 }
 
 @mixin sides-margin {
-  margin-left: 10%;
-  margin-right: 10%;
+  // margin-left: 10%;
+  // margin-right: 10%;
+  max-width: 1400px;
+  margin: auto;
 }
 
 @mixin fixed-footer {
