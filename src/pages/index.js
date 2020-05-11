@@ -12,9 +12,9 @@ import MouseIcon from "../images/mouse_icon.svg";
 
 const Homepage = () => {
   const handleClick = e => {
-    const about_me = document.querySelector(".about-me").offsetTop;
+    const projectsSection = document.querySelector(".projects").offsetTop;
 
-    window.scrollTo({ top: about_me, behavior: "smooth" });
+    window.scrollTo({ top: projectsSection, behavior: "smooth" });
   };
 
   return (
