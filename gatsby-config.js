@@ -5,6 +5,7 @@ require("dotenv").config({
 module.exports = {
   // pathPrefix: `/`,
   siteMetadata: {
+    siteUrl: `https://fanismahmalat.com`,
     siteTitle: `Fanis Mahmalat - Web Developer`,
     siteDescription: `Portfolio website showcasing development work`,
     siteAuthor: `Fanis Mahmalat <fanismahmalat@gmail.com>`,
@@ -35,6 +36,7 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-contentful`,
       options: {

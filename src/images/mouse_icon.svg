@@ -1,1 +1,14 @@
-<svg id="ekvd72o8zbrl1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 47" shape-rendering="geometricPrecision" text-rendering="geometricPrecision"><style><![CDATA[#ekvd72o8zbrl6_to {animation: ekvd72o8zbrl6_to__to 1500ms forwards ease infinite}@keyframes ekvd72o8zbrl6_to__to { 0% {transform: translate(213px,886px)} 19.666667% {transform: translate(212.500000px,908.105971px)} 100% {transform: translate(212.500000px,908.105971px)} }#ekvd72o8zbrl6 {animation: ekvd72o8zbrl6_c_o 1500ms forwards ease infinite}@keyframes ekvd72o8zbrl6_c_o { 0% {opacity: 1} 19.666667% {opacity: 0} 100% {opacity: 0} }]]></style><g id="ekvd72o8zbrl2" transform="matrix(1 0 0 1 -200 -877)"><g id="ekvd72o8zbrl3" transform="matrix(1 0 0 1 200 877)"><rect id="ekvd72o8zbrl4" width="28" height="47" rx="14" ry="0" fill="none" stroke="none" stroke-width="2"/><rect id="ekvd72o8zbrl5" width="26" height="45" rx="13" ry="13" transform="matrix(1 0 0 1 1 1)" fill="none" stroke="rgb(255,202,58)" stroke-width="2"/></g><g id="ekvd72o8zbrl6_to" transform="translate(213,886)"><rect id="ekvd72o8zbrl6" width="3" height="6" rx="1.500000" ry="1.500000" transform="translate(0,0)" fill="rgb(255,202,58)" stroke="none" stroke-width="1"/></g></g></svg>
+<svg id="ekvd72o8zbrl1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 28 47" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+  <style>
+  <![CDATA[#ekvd72o8zbrl6_to {animation: ekvd72o8zbrl6_to__to 1500ms forwards ease infinite}@keyframes ekvd72o8zbrl6_to__to { 0% {transform: translate(213px,886px)} 19.666667% {transform: translate(212.500000px,908.105971px)} 100% {transform: translate(212.500000px,908.105971px)} }#ekvd72o8zbrl6 {animation: ekvd72o8zbrl6_c_o 1500ms forwards ease infinite}@keyframes ekvd72o8zbrl6_c_o { 0% {opacity: 1} 19.666667% {opacity: 0} 100% {opacity: 0} }]]>
+  </style>
+  <g id="ekvd72o8zbrl2" transform="matrix(1 0 0 1 -200 -877)">
+    <g id="ekvd72o8zbrl3" transform="matrix(1 0 0 1 200 877)">
+      <rect id="ekvd72o8zbrl4" width="28" height="47" rx="14" ry="0" fill="none" stroke="none" stroke-width="2"/>
+      <rect id="ekvd72o8zbrl5" width="26" height="45" rx="13" ry="13" transform="matrix(1 0 0 1 1 1)" fill="none" stroke="rgb(255,202,58)" stroke-width="2"/>
+    </g>
+    <g id="ekvd72o8zbrl6_to" transform="translate(213,886)">
+      <rect id="ekvd72o8zbrl6" width="3" height="6" rx="1.500000" ry="1.500000" transform="translate(0,0)" fill="rgb(255,202,58)" stroke="none" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

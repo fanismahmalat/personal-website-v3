@@ -14,7 +14,7 @@ const Header = () => {
   useEffect(() => {
     const header = document.getElementById("nav");
     const scrollCallBack = window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 50) {
+      if (window.pageYOffset > 200) {
         header.classList.add("sticky");
       } else {
         header.classList.remove("sticky");

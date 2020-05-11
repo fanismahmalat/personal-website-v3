@@ -66,6 +66,7 @@ query MyQuery {
             srcSet
           }
         }
+        tags
       }
     }
   }
