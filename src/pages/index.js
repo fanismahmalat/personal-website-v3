@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import ProjectCard from "../components/ProjectCard";
 import QuoteCard from "../components/QuoteCard";
+import BlogCard from "../components/BlogCard";
 import Button from "../components/Button";
 
 import BackgroundImage from "../images/homepage_bg.svg";
@@ -69,6 +70,7 @@ const Homepage = () => {
         </section>
 
         <QuoteCard />
+        <BlogCard />
       </div>
     </Layout>
   );

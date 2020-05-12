@@ -1,0 +1,54 @@
+.blog-card {
+  margin: 100px auto;
+
+  .card-inner {
+    margin: 0px 200px;
+    min-height: 340px;
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    column-gap: 30px;
+    color: $black;
+    align-items: center;
+    position: relative;
+    // padding: 30px 0;
+
+    .background {
+      position: absolute;
+      background-color: #d9f2ff;
+      width: 80%;
+      height: 70%;
+      left: 0;
+      bottom: 0;
+      z-index: -2;
+    }
+
+    .headline {
+      font-size: 1.6em;
+      font-family: $serif;
+      line-height: 1.5;
+      max-width: 350px;
+      align-self: flex-end;
+      margin: auto 0 50px 50px;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        font-family: $SanSerif;
+        font-size: 16px;
+        // margin-top: 50px;
+      }
+    }
+
+    img {
+      align-self: flex-start;
+      justify-self: end;
+      object-fit: cover;
+      object-position: center;
+      height: 250px;
+      width: 450px;
+      border: 7px solid $blue;
+    }
+  }
+}
