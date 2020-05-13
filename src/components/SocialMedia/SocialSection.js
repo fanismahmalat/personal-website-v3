@@ -7,8 +7,8 @@ const SocialSection = () => {
     <section className="social-section">
       <div className="social-inner">
         <SocialCard platform="instagram" />
-        <SocialCard platform="twitter" />
-        <SocialCard platform="sad" />
+        <SocialCard platform="facebook" />
+        <SocialCard platform="linkedin" />
       </div>
     </section>
   );

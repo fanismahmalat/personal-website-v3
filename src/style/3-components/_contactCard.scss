@@ -1,0 +1,26 @@
+.get-in-touch {
+  margin: 130px 0;
+  margin-top: 220px;
+
+  a.inner {
+    text-align: center;
+    color: $black;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: $blue;
+      font-size: 5em;
+      font-weight: 300;
+      font-family: $serif;
+      @include transition;
+    }
+
+    &:hover h2 {
+      text-transform: lowercase;
+      font-style: italic;
+    }
+  }
+}

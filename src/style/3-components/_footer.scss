@@ -1,0 +1,23 @@
+footer {
+  background-color: $yellow;
+  height: 80px;
+
+  .footer-inner {
+    font-size: 0.9em;
+    color: $black;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    align-items: center;
+
+    .details {
+      span {
+        margin-right: 5px;
+      }
+    }
+
+    .logo {
+      height: 40px;
+    }
+  }
+}
