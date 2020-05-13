@@ -2,10 +2,11 @@ import React from "react";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Button from "../components/Button";
 import ProjectCard from "../components/ProjectCard";
 import QuoteCard from "../components/QuoteCard";
 import BlogCard from "../components/BlogCard";
-import Button from "../components/Button";
+import SocialSection from "../components/SocialMedia/SocialSection";
 
 import BackgroundImage from "../images/homepage_bg.svg";
 import HeroIllustration from "../images/homepage_hero.svg";
@@ -70,7 +71,10 @@ const Homepage = () => {
         </section>
 
         <QuoteCard />
+
         <BlogCard />
+
+        <SocialSection />
       </div>
     </Layout>
   );
