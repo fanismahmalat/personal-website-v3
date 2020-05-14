@@ -69,3 +69,16 @@
     object-position: center;
   }
 }
+
+@media (max-width: $mobile) {
+  .project-card {
+    height: 800px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+
+    .details {
+      grid-row: 2/3;
+      max-width: 75%;
+    }
+  }
+}

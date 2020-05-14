@@ -18,9 +18,13 @@ header {
       .logo {
         justify-self: start;
 
-        img {
+        .logo-dark {
           height: 40px;
           @include transition;
+        }
+
+        .logo-white {
+          display: none;
         }
       }
 
@@ -102,7 +106,7 @@ header {
   }
 }
 
-@media (max-width: 1450px) {
+@media (max-width: $desktop) {
   header {
     nav {
       .wrapper {
@@ -112,7 +116,7 @@ header {
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: $tablet-sm) {
   header {
     height: 80px;
 
@@ -127,7 +131,12 @@ header {
         grid-template-columns: 1fr 1fr;
 
         .logo {
-          img {
+          .logo-dark {
+            display: none;
+          }
+
+          .logo-white {
+            display: inline-block;
             height: 30px;
           }
         }
@@ -135,6 +144,12 @@ header {
         .sidebar-icon {
           display: inline-block;
           grid-column: 2/3;
+
+          svg {
+            path {
+              fill: $white;
+            }
+          }
         }
 
         .links-wrapper,

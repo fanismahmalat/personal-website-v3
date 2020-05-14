@@ -7,6 +7,8 @@ const Footer = () => {
   return (
     <footer>
       <section className="footer-inner">
+        <img src={siteLogoWhite} alt="Fanis Mahmalat Logo" className="logo" />
+
         <div className="details">
           <span className="copyright">© fanismahmalat.com 2020</span>
           <span className="seperator">|</span>
@@ -14,8 +16,6 @@ const Footer = () => {
           <span className="seperator">|</span>
           <span className="handcrafted">Handcrafted by Fanis Mahmalat</span>
         </div>
-
-        <img src={siteLogoWhite} alt="Fanis Mahmalat Logo" className="logo" />
       </section>
     </footer>
   );

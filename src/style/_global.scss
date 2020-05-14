@@ -1,0 +1,10 @@
+section {
+  @include sides-margin;
+}
+
+@media (max-width: $desktop) {
+  section {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+}

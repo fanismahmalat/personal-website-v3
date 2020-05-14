@@ -9,7 +9,7 @@ import { MdMenu } from "react-icons/md";
 
 const Header = () => {
   const [isSideMenuOpen, setSideMenuOpen] = useState(false);
-  const { siteLogoDark } = useSiteMetadata();
+  const { siteLogoDark, siteLogoWhite } = useSiteMetadata();
 
   useEffect(() => {
     const header = document.getElementById("nav");
@@ -34,7 +34,16 @@ const Header = () => {
       <nav id="nav">
         <div className="wrapper">
           <Link to="/" className="logo">
-            <img src={siteLogoDark} alt="Fanis Mahmalat Logo" />
+            <img
+              src={siteLogoDark}
+              alt="Fanis Mahmalat Logo"
+              className="logo-dark"
+            />
+            <img
+              src={siteLogoWhite}
+              alt="Fanis Mahmalat Logo"
+              className="logo-white"
+            />
           </Link>
           <NavLinks />
           <div className="sidebar-icon">

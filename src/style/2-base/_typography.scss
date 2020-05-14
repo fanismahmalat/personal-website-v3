@@ -7,4 +7,12 @@ body {
 
 a {
   @include transition;
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: $desktop) {
+  body {
+    font-size: 14px;
+  }
 }

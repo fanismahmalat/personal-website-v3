@@ -28,16 +28,17 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     grid-template-rows: 1fr;
+    column-gap: 100px;
     align-items: center;
 
     .text {
       grid-column: 1/2;
       align-self: center;
-      // margin-top: 7rem;
+      // margin-top: 7em;
       font-family: $SanSerif;
 
       .author-name {
-        font-size: 1.8rem;
+        font-size: 1.8em;
         color: $blue;
         font-weight: 300;
         letter-spacing: -2px;
@@ -47,7 +48,7 @@
       .headline {
         font-family: $serif;
         line-height: 1.05;
-        font-size: 5.5rem;
+        font-size: 5.5em;
         color: $blue;
         font-weight: 500;
         text-transform: uppercase;
@@ -56,7 +57,7 @@
 
       .description {
         width: 80%;
-        font-size: 1.2rem;
+        font-size: 1.2em;
         font-weight: 300;
         color: $black;
         line-height: 1.5;
@@ -68,7 +69,7 @@
         margin-top: 150px;
         padding-left: 10px;
         width: 25px;
-        font-size: 1.7rem;
+        font-size: 1.7em;
         cursor: pointer;
       }
     }
@@ -88,6 +89,108 @@
       text-align: center;
       margin-top: 80px;
       margin-bottom: 120px;
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  .page-homepage {
+    .hero {
+      .text {
+        .headline {
+          font-size: 4.6em;
+        }
+
+        .description {
+          width: 100%;
+        }
+      }
+
+      .hero-illustration {
+        width: 400px;
+        margin-top: -50px;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-lg) {
+  .page-homepage {
+    .hero {
+      grid-template-columns: 1fr;
+
+      .text {
+        max-width: 80%;
+
+        .headline {
+          font-size: 5.5em;
+        }
+      }
+
+      .hero-illustration {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-sm) {
+  .page-homepage {
+    .hero-background {
+      min-height: unset;
+    }
+
+    .hero {
+      height: unset;
+      min-height: unset;
+
+      .text {
+        max-width: 90%;
+        align-self: flex-start;
+        margin-top: 80px;
+        margin-bottom: 120px;
+
+        .headline {
+          font-size: 10vw;
+          margin: 10px 0 15px 0;
+        }
+
+        .mouse-icon {
+          margin-top: 90px;
+        }
+      }
+    }
+
+    section.projects {
+      .btn-wrapper {
+        margin-bottom: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-homepage {
+    .hero-background {
+      height: 420px;
+    }
+
+    .hero {
+      .text {
+        .author-name {
+          font-size: 1.6em;
+        }
+
+        .headline {
+          font-weight: 300;
+          font-size: 3em;
+          margin-bottom: 20px;
+        }
+
+        .description {
+          max-width: 100%;
+        }
+      }
     }
   }
 }

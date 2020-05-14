@@ -34,6 +34,33 @@
         padding: 10px 12%;
         margin-bottom: 20px;
         text-align: center;
+        position: relative;
+      }
+
+      .single-link:not(:last-of-type):after {
+        content: "";
+        top: -5px;
+        width: 20%;
+        height: 30px;
+        background-color: $blue;
+        position: absolute;
+        opacity: 0;
+        z-index: -2;
+        @include transition;
+        animation: sideMenuAnimation 2s ease-out infinite alternate;
+      }
+
+      .single-link:hover:after {
+        opacity: 0.1;
+      }
+
+      @keyframes sideMenuAnimation {
+        from {
+          transform: translateX(-80%);
+        }
+        to {
+          transform: translateX(-70%);
+        }
       }
     }
 
@@ -85,4 +112,10 @@
 .show-overlay {
   opacity: 1;
   visibility: visible;
+}
+
+@media (max-width: $tablet-sm) {
+  .SideMenu {
+    font-size: 18px;
+  }
 }

@@ -7,8 +7,8 @@ const QuoteCard = () => {
         <div className="background" />
 
         <div className="headline">
-          Life is too short for&nbsp;poor code and bad&nbsp;beer.
-          <br /> Never compromise on&nbsp;those&nbsp;two.
+          Life is too short for&nbsp;poor code and bad&nbsp;beer.{" "}
+          <span>Never compromise on&nbsp;those&nbsp;two.</span>
         </div>
 
         <div className="body">

@@ -11,6 +11,9 @@ footer {
     align-items: center;
 
     .details {
+      grid-column: 1/2;
+      grid-row: 1/2;
+
       span {
         margin-right: 5px;
       }
@@ -18,6 +21,36 @@ footer {
 
     .logo {
       height: 40px;
+    }
+  }
+}
+
+@media (max-width: $tablet-sm) {
+  footer {
+    height: unset;
+
+    .footer-inner {
+      display: block;
+      text-align: center;
+      padding: 40px 0;
+
+      img {
+        margin-bottom: 25px;
+      }
+
+      .details {
+        font-size: 1.2em;
+        font-weight: 300;
+
+        span {
+          display: block;
+          margin-top: 8px;
+
+          &.seperator {
+            display: none;
+          }
+        }
+      }
     }
   }
 }

@@ -25,12 +25,79 @@
       font-size: 2em;
       font-family: $serif;
       line-height: 1.4;
+
+      span {
+        display: block;
+      }
     }
 
     .body {
       line-height: 1.5;
       padding-left: 20px;
       padding-right: 60px;
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  .quote {
+    .quote-card {
+      .background {
+        height: 85%;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-lg) {
+  .quote {
+    .quote-card {
+      margin: 0px 100px;
+      padding: 40px 0;
+
+      .headline {
+        font-size: 1.8em;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-sm) {
+  .quote {
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 50px;
+
+    .quote-card {
+      margin: unset;
+      height: unset;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 1fr;
+      row-gap: 30px;
+      font-size: 1.2em;
+      padding-bottom: 20px;
+
+      .background {
+        width: 100%;
+        height: 78%;
+        bottom: 0;
+      }
+
+      .headline {
+        justify-self: center;
+        padding-left: 20px;
+        padding-right: 60px;
+
+        span {
+          display: inline;
+        }
+      }
+
+      .body {
+        font-size: 1em;
+        line-height: 1.6;
+        align-self: flex-start;
+      }
     }
   }
 }
