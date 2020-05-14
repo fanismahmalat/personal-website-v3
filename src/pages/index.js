@@ -27,18 +27,18 @@ const Homepage = () => {
       <div className="bg-color" />
 
       <div className="page-wrapper">
-        <section className="hero" data-sal="fade-up">
+        <section className="hero">
           <div className="text">
             <h3
-              data-sal="slide-up"
-              data-sal-delay="150"
+              data-sal="slide-down"
+              data-sal-delay="550"
               className="author-name"
             >
               Fanis Mahmalat
             </h3>
             <h1
               data-sal="fade"
-              data-sal-duration="700"
+              data-sal-duration="600"
               data-sal-delay="180"
               className="headline"
             >
