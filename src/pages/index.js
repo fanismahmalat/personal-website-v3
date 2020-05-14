@@ -67,7 +67,11 @@ const Homepage = () => {
         <section className="projects">
           <ProjectCard />
           <div className="btn-wrapper">
-            <Button type="bordered" link="/" placeholder="See more projects" />
+            <Button
+              type="bordered"
+              link="/work"
+              placeholder="See more projects"
+            />
           </div>
         </section>
 

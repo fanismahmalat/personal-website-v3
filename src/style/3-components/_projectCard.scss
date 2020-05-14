@@ -70,7 +70,13 @@
   }
 }
 
-@media (max-width: $mobile) {
+@media (max-width: $tablet-lg) {
+  .project-card {
+    height: 500px;
+  }
+}
+
+@media (max-width: $tablet-sm) {
   .project-card {
     height: 800px;
     grid-template-columns: 1fr;
