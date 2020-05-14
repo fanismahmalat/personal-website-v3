@@ -28,8 +28,8 @@ module.exports = {
         name: `Fanis Mahmalat Portfolio Website`,
         short_name: `FMWebsite`,
         start_url: `/`,
-        background_color: `#11638C`,
-        theme_color: `#11638C`,
+        background_color: `#f1f1f1`,
+        theme_color: `#f1f1f1`,
         display: `minimal-ui`,
         icon: `src/images/blue_favicon.png`, // This path is relative to the root of the site.
       },
