@@ -1,4 +1,4 @@
-.page-work {
+.page-blog {
   position: relative;
   // overflow: hidden;
 
@@ -39,7 +39,7 @@
 }
 
 @media (max-width: $desktop) {
-  .page-work {
+  .page-blog {
     overflow-x: hidden;
     top: -80px;
     margin-bottom: -80px;
@@ -63,7 +63,7 @@
 }
 
 @media (max-width: $tablet-lg) {
-  .page-work {
+  .page-blog {
     .hero {
       min-height: 500px;
       font-size: 0.9rem;
@@ -84,7 +84,7 @@
 }
 
 @media (max-width: $tablet-sm) {
-  .page-work {
+  .page-blog {
     .hero {
       min-height: 400px;
       height: 200px;
@@ -102,7 +102,7 @@
 }
 
 @media (max-width: $mobile) {
-  .page-work {
+  .page-blog {
     .page-bg {
       top: -90px;
     }

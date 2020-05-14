@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import ProjectCard from "../components/ProjectCard";
-import BlogCard from "../components/BlogCard";
+import BlogCTA from "../components/BlogCTA";
 import SocialSection from "../components/SocialMedia/SocialSection";
 
 import BackgroundImage from "../images/page_bg.svg";
@@ -33,9 +33,15 @@ const Work = () => {
 
         <section className="projects">
           <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
         </section>
 
-        <BlogCard />
+        <BlogCTA />
 
         <SocialSection />
       </div>

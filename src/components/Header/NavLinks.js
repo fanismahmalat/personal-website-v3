@@ -16,12 +16,14 @@ const NavLinks = ({ isSideMenuOpen }) => {
             </Link>
           </li>
           <li className="single-link">
-            <Link to="/work" activeStyle={linkSyle} partiallyActive={true}>
+            <Link to="/work" activeStyle={linkSyle}>
               WORK
             </Link>
           </li>
           <li className="single-link">
-            <Link to="/blog">BLOG</Link>
+            <Link to="/blog" activeStyle={linkSyle}>
+              BLOG
+            </Link>
           </li>
           <li className="cta single-link">
             <Link to="/contact">GET IN TOUCH</Link>

@@ -6,7 +6,7 @@ import SEO from "../components/seo";
 import Button from "../components/Button";
 import ProjectCard from "../components/ProjectCard";
 import QuoteCard from "../components/QuoteCard";
-import BlogCard from "../components/BlogCard";
+import BlogCTA from "../components/BlogCTA";
 import SocialSection from "../components/SocialMedia/SocialSection";
 
 import BackgroundImage from "../images/homepage_bg.svg";
@@ -77,7 +77,7 @@ const Homepage = () => {
 
         <QuoteCard />
 
-        <BlogCard />
+        <BlogCTA />
 
         <SocialSection />
       </div>

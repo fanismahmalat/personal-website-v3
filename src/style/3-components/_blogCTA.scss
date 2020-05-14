@@ -1,0 +1,131 @@
+.blog-cta {
+  margin: 150px auto;
+
+  .card-inner {
+    margin: 0px 200px;
+    min-height: 340px;
+    display: grid;
+    grid-template-columns: 1fr 0.6fr;
+    column-gap: 30px;
+    color: $black;
+    align-items: center;
+    position: relative;
+    // padding: 30px 0;
+
+    .background {
+      position: absolute;
+      background-color: #d9f2ff;
+      width: 80%;
+      height: 70%;
+      left: 0;
+      bottom: 0;
+      z-index: -2;
+    }
+
+    .headline {
+      font-size: 1.6em;
+      font-family: $serif;
+      line-height: 1.5;
+      max-width: 350px;
+      align-self: flex-end;
+      margin: auto 0 50px 50px;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        font-family: $SanSerif;
+        font-size: 16px;
+        // margin-top: 50px;
+      }
+    }
+
+    img {
+      align-self: flex-start;
+      justify-self: end;
+      object-fit: cover;
+      object-position: center;
+      height: 250px;
+      width: 450px;
+      border: 7px solid $blue;
+    }
+  }
+}
+
+@media (max-width: $tablet-lg) {
+  .blog-cta {
+    margin: 0px 100px;
+    padding: 40px 0;
+
+    .card-inner {
+      margin: unset;
+
+      .headline {
+        font-size: 1.7em;
+
+        .btn {
+          font-size: 14px;
+        }
+      }
+
+      img {
+        height: 220px;
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-sm) {
+  .blog-cta {
+    margin-right: 5%;
+    margin-left: 5%;
+    font-size: 1rem;
+    padding: 0;
+
+    .card-inner {
+      margin: unset;
+      height: unset;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 30px;
+      font-size: 1.2em;
+      padding-bottom: 0px;
+
+      .headline {
+        margin: unset;
+        max-width: unset;
+        grid-row: 2/3;
+        padding-left: 20px;
+        padding-right: 60px;
+        align-self: flex-start;
+        font-size: 1.4em;
+
+        p {
+          margin-bottom: 20px;
+        }
+      }
+
+      img {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .background {
+        width: 100%;
+        bottom: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .blog-cta {
+    .card-inner {
+      .background {
+        bottom: 10px;
+      }
+    }
+  }
+}
