@@ -10,7 +10,7 @@ const ContactForm = () => {
       className="contact-form validate-form"
       name="Contact"
       method="POST"
-      netlify
+      data-netlify="true"
       action="/contact-success"
     >
       <h1 className="contact2-form-title">Get in touch</h1>
