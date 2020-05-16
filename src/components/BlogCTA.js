@@ -10,7 +10,7 @@ const BlogCTA = () => {
 
         <div className="headline">
           <p>Thoughts on design, development and hustling.</p>
-          <Button link="/" type="solid" placeholder="Read my blog" />
+          <Button link="/blog" type="solid" placeholder="Read my blog" />
         </div>
 
         <img src="/img.png" alt="Blog" />

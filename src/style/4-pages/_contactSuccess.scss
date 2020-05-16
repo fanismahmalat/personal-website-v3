@@ -1,5 +1,14 @@
 .page-contact-success {
   margin-bottom: 80px;
+  position: relative;
+
+  .page-bg {
+    position: absolute;
+    z-index: -1000;
+    top: -180px;
+    width: 100%;
+    // max-height: 500px;
+  }
 
   .page-wrapper {
     section {
@@ -31,6 +40,35 @@
           top: 2px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: $desktop) {
+  .page-contact-success {
+    overflow-x: hidden;
+    top: -80px;
+    margin-bottom: 0px;
+
+    .page-wrapper {
+      section {
+        margin-top: 140px;
+        margin-bottom: 140px;
+      }
+    }
+
+    .page-bg {
+      top: -80px;
+      min-height: 800px;
+      transform: scaleX(2);
+    }
+  }
+}
+
+@media (max-width: $mobile) {
+  .page-contact-success {
+    .page-bg {
+      top: -90px;
     }
   }
 }

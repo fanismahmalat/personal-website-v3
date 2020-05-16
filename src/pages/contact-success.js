@@ -7,16 +7,19 @@ import SEO from "../components/seo";
 
 import SocialSection from "../components/SocialMedia/SocialSection";
 
+import BackgroundImage from "../images/page_bg.svg";
+
 const ContactSuccess = () => {
   useEffect(() => {
     setTimeout(function () {
-      // if (typeof window !== `undefined`) window.location.replace(`/`);
+      if (typeof window !== `undefined`) window.location.replace(`/`);
     }, 4000);
   }, []);
 
   return (
     <Layout pageTitle="contact-success">
       <SEO pageTitle="Thank you for contacting!" />
+      <BackgroundImage className="page-bg" />
 
       <div className="page-wrapper">
         <section>
