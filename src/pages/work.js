@@ -5,6 +5,7 @@ import SEO from "../components/seo";
 import ProjectCard from "../components/ProjectCard";
 import BlogCTA from "../components/BlogCTA";
 import SocialSection from "../components/SocialMedia/SocialSection";
+import ContactCard from "../components/ContactCard";
 
 import BackgroundImage from "../images/page_bg.svg";
 
@@ -44,6 +45,8 @@ const Work = () => {
         <BlogCTA />
 
         <SocialSection />
+
+        <ContactCard />
       </div>
     </Layout>
   );

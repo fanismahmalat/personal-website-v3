@@ -5,6 +5,7 @@ import SEO from "../components/seo";
 import BlogCard from "../components/BlogCard";
 import SocialSection from "../components/SocialMedia/SocialSection";
 import Pagination from "../components/Pagination";
+import ContactCard from "../components/ContactCard";
 
 import BackgroundImage from "../images/page_bg.svg";
 
@@ -45,6 +46,8 @@ const Work = ({ pageContext }) => {
         </section>
 
         <SocialSection />
+
+        <ContactCard />
       </div>
     </Layout>
   );

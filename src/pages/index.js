@@ -8,6 +8,7 @@ import ProjectCard from "../components/ProjectCard";
 import QuoteCard from "../components/QuoteCard";
 import BlogCTA from "../components/BlogCTA";
 import SocialSection from "../components/SocialMedia/SocialSection";
+import ContactCard from "../components/ContactCard";
 
 import BackgroundImage from "../images/homepage_bg.svg";
 import HeroIllustration from "../images/homepage_hero.svg";
@@ -80,6 +81,8 @@ const Homepage = () => {
         <BlogCTA />
 
         <SocialSection />
+
+        <ContactCard />
       </div>
     </Layout>
   );

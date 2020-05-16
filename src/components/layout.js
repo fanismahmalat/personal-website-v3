@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
 import Header from "./Header";
-import ContactCard from "./ContactCard";
+
 import Footer from "./Footer";
 
 const Layout = ({ children, pageTitle }) => {
@@ -13,7 +13,7 @@ const Layout = ({ children, pageTitle }) => {
     <>
       <Header siteTitle={siteTitle} />
       <main className={`page-${pageTitle}`}>{children}</main>
-      <ContactCard />
+
       <Footer />
     </>
   );

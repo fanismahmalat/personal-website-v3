@@ -46,7 +46,7 @@ exports.createPages = ({ graphql, actions }) => {
           edges: blogArticles,
           createPage: createPage,
           pageTemplate: blogTemplate,
-          pageLength: 2,
+          pageLength: 4,
           pathPrefix: "/blog",
           context: {},
         });
