@@ -10,7 +10,7 @@ const ContactForm = () => {
       className="contact-form validate-form"
       name="Contact Form"
       method="POST"
-      data-netlify="true"
+      netlify
       action="/contact-success"
     >
       <h1 className="contact2-form-title">Get in touch</h1>
@@ -23,7 +23,7 @@ const ContactForm = () => {
           className={`input2 ${name.length > 0 ? "has-val" : ""}`}
           type="text"
           name="name"
-          // required
+          required
           value={name}
           onChange={event => setName(event.target.value)}
         />
@@ -38,7 +38,7 @@ const ContactForm = () => {
           className={`input2 ${email.length > 0 ? "has-val" : ""}`}
           type="email"
           name="email"
-          // required
+          required
           value={email}
           onChange={event => setEmail(event.target.value)}
         />
@@ -52,7 +52,7 @@ const ContactForm = () => {
         <textarea
           className={`input2 ${msg.length > 0 ? "has-val" : ""}`}
           name="message"
-          // required
+          required
           value={msg}
           onChange={event => setMsg(event.target.value)}
         ></textarea>
