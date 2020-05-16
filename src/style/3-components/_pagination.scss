@@ -1,0 +1,60 @@
+.pagination {
+  height: 40px;
+  width: 100%;
+  text-align: center;
+  @include transition;
+
+  .wrapper {
+    position: relative;
+    height: 100%;
+
+    .disabled {
+      // Disabled button
+      // filter: blackscale(100%);
+      // opacity: 0.5;
+      // pointer-events: none;
+
+      // Not showing at all
+      display: none;
+    }
+
+    .nav-btn {
+      &:hover {
+        color: $blue;
+      }
+    }
+
+    .prev {
+      margin-right: 15px;
+    }
+
+    .next {
+      margin-left: 15px;
+    }
+
+    .pages {
+      display: inline-block;
+      list-style-type: none;
+      height: 100%;
+
+      a {
+        display: inline-block;
+        line-height: 40px;
+        text-align: center;
+        width: 40px;
+        margin-right: 10px;
+
+        &.current-page {
+          background-color: $black;
+          color: $white;
+        }
+
+        &:not(.current-page):hover {
+          background-color: $black;
+          color: $white;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

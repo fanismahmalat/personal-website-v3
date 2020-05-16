@@ -4,10 +4,19 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import BlogCard from "../components/BlogCard";
 import SocialSection from "../components/SocialMedia/SocialSection";
+import Pagination from "../components/Pagination";
 
 import BackgroundImage from "../images/page_bg.svg";
 
-const Work = () => {
+const Work = ({ pageContext }) => {
+  const { group } = pageContext;
+
+  console.log(group);
+
+  let blogCards = group.map((article, i) => {
+    return <BlogCard article={article.node} key={article.node.id} />;
+  });
+
   return (
     <Layout pageTitle="blog">
       <SEO pageTitle="Blog" />
@@ -31,7 +40,8 @@ const Work = () => {
         </section>
 
         <section className="articles">
-          <BlogCard />
+          {blogCards}
+          <Pagination pageContext={pageContext} />
         </section>
 
         <SocialSection />

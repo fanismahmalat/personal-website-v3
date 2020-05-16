@@ -1,8 +1,10 @@
 # Blog posts
 query MyQuery {
-  allContentfulBlogPosts {
+  allContentfulBlogPosts(sort: { fields: createdAt, order: DESC }) {
     edges {
       node {
+        id
+        slug
         title
         featured_image {
           fluid {

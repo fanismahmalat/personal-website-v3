@@ -2,16 +2,29 @@ import React from "react";
 
 import Button from "./Button";
 
-const BlogCard = () => {
+const BlogCard = ({ article }) => {
+  const slug = article.slug;
+  const title = article.title;
+  const featured_image = article.featured_image.fluid.srcSet;
+  const date = article.createdAt;
+
   return (
     <div className="blog-card">
       <div className="details">
-        <span className="date">25 May 2020</span>
-        <h2 className="title">The importance of reward systems in UX</h2>
-        <Button type="solid" link="/" placeholder="Read the story" />
+        <span className="date">{date}</span>
+        <h2 className="title">{title}</h2>
+        <Button
+          type="solid"
+          link={`/articles/${slug}`}
+          placeholder="Read the story"
+        />
       </div>
 
-      <img src="/img.png" alt="Article image" />
+      <img
+        srcSet={featured_image}
+        sizes="(max-width: 500px) 400px, (max-width: 800px) 800px, 1600px"
+        alt="Article image"
+      />
     </div>
   );
 };

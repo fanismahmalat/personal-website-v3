@@ -36,6 +36,11 @@
       }
     }
   }
+
+  .articles {
+    padding-top: 30px;
+    margin-top: -30px;
+  }
 }
 
 @media (max-width: $desktop) {
@@ -108,7 +113,7 @@
     }
 
     .hero {
-      min-height: 380px;
+      min-height: 290px;
       font-size: 0.55rem;
       padding-top: 20px;
 
