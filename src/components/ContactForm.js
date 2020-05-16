@@ -59,6 +59,8 @@ const ContactForm = () => {
         <span className="focus-input2" data-placeholder="MESSAGE"></span>
       </div>
 
+      <input type="text" name="another" />
+
       <button className="btn" type="submit">
         SEND
       </button>
