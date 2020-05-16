@@ -12,7 +12,7 @@ const ContactForm = () => {
       method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
-      action="/pages/contact-success"
+      action="/contact-success"
     >
       <h1 className="contact2-form-title">Get in touch</h1>
 

@@ -39,11 +39,6 @@ const Header = () => {
               alt="Fanis Mahmalat Logo"
               className="logo-dark"
             />
-            <img
-              src={siteLogoWhite}
-              alt="Fanis Mahmalat Logo"
-              className="logo-white"
-            />
           </Link>
           <NavLinks />
           <div className="sidebar-icon">

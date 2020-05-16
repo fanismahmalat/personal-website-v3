@@ -133,11 +133,6 @@ header {
 
         .logo {
           .logo-dark {
-            display: none;
-          }
-
-          .logo-white {
-            display: inline-block;
             height: 30px;
           }
         }
@@ -146,11 +141,11 @@ header {
           display: inline-block;
           grid-column: 2/3;
 
-          svg {
-            path {
-              fill: $white;
-            }
-          }
+          // svg {
+          //   path {
+          //     fill: $white;
+          //   }
+          // }
         }
 
         .links-wrapper,

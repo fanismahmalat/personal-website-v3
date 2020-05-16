@@ -18,9 +18,11 @@
   input {
     outline: none;
     border: none;
+    background-color: transparent;
   }
 
   textarea {
+    background-color: transparent;
     outline: none;
     border: none;
     max-width: 100%;
@@ -198,4 +200,12 @@ textarea.input2 + .focus-input2::after {
 
 .has-val.input2 + .focus-input2::before {
   width: 100%;
+}
+
+@media (max-width: $tablet-sm) {
+  .contact-form {
+    .contact2-form-title {
+      font-size: 4em;
+    }
+  }
 }
