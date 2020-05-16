@@ -8,7 +8,7 @@ const ContactForm = () => {
   return (
     <form
       className="contact-form validate-form"
-      name="Contact Form"
+      name="Contact"
       method="POST"
       netlify
       action="/contact-success"
