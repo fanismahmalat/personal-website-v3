@@ -39,6 +39,8 @@ const ContactForm = () => {
     >
       <h1 className="contact2-form-title">Get in touch</h1>
 
+      <input name="form-name" value="Contact Form" type="hidden" />
+
       <div
         className="wrap-input2 validate-input"
         data-validate="Name is required"
