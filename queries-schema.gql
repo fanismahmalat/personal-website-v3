@@ -84,6 +84,7 @@ query MyQuery {
           body
         }
         account_username
+        profile_url
       }
     }
   }

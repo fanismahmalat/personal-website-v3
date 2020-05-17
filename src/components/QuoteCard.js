@@ -1,6 +1,27 @@
 import React from "react";
+// import { useStaticQuery } from "gatsby";
 
 const QuoteCard = () => {
+  // const data = useStaticQuery(graphql`
+  //   query Quote {
+  //     quote: allContentfulCallToActions {
+  //       edges {
+  //         node {
+  //           identifier
+  //           headline
+  //           body {
+  //             body
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+
+  // let quote = data.quote.edges.filter(edge => {
+  //   return edge.node.identifier === "quote";
+  // });
+
   return (
     <section className="quote">
       <div className="quote-card">

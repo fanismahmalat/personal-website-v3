@@ -7,10 +7,12 @@ import {
 } from "react-icons/ai";
 import { FaPinterestSquare, FaInstagram, FaGlobeEurope } from "react-icons/fa";
 
-const SocialCard = ({ platform }) => {
+const SocialCard = ({
+  platformInfo: { account_username, body, identifier, profile_url },
+}) => {
   let socialIcon;
 
-  switch (platform) {
+  switch (identifier) {
     case "instagram":
       socialIcon = <FaInstagram />;
       break;
@@ -35,12 +37,9 @@ const SocialCard = ({ platform }) => {
     <div className="social-card">
       <div className="card-inner">
         <div className="icon">{socialIcon}</div>
-        <p className="body">
-          Where I share my journey as a Web Developer and post tips and tricks
-          about coding.
-        </p>
-        <a href="#" className="link-to-profile">
-          @fanismahmalat
+        <p className="body">{body.body}</p>
+        <a href={profile_url} className="link-to-profile" target="_blank">
+          {account_username}
         </a>
       </div>
     </div>
