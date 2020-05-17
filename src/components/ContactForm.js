@@ -30,11 +30,7 @@ const ContactForm = () => {
     <form
       className="contact-form validate-form"
       onSubmit={handleSubmit}
-      // name="Contact"
-      // method="POST"
-      // data-netlify={true}
-      // action="/contact-success"
-      // type="application/x-www-form-urlencoded"
+      id="contact-form"
     >
       <h1 className="contact2-form-title">Get in touch</h1>
 
@@ -74,6 +70,8 @@ const ContactForm = () => {
       >
         <textarea
           className={`input2 ${msg.length > 0 ? "has-val" : ""}`}
+          type="text"
+          form="contact-form"
           name="message"
           required
           value={msg}
@@ -81,8 +79,6 @@ const ContactForm = () => {
         ></textarea>
         <span className="focus-input2" data-placeholder="MESSAGE"></span>
       </div>
-
-      <input type="text" name="another" />
 
       <button className="btn" type="submit">
         SEND
