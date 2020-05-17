@@ -17,7 +17,7 @@ const ContactForm = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "Contact Form",
+        "form-name": "Contact Form 2",
         ...{ name, email, msg },
       }),
     })
@@ -71,7 +71,7 @@ const ContactForm = () => {
         <span className="focus-input2" data-placeholder="EMAIL"></span>
       </div>
 
-      {/* <div
+      <div
         className="wrap-input2 validate-input"
         data-validate="Message is required"
       >
@@ -84,7 +84,7 @@ const ContactForm = () => {
           onChange={event => setMsg(event.target.value)}
         ></textarea>
         <span className="focus-input2" data-placeholder="MESSAGE"></span>
-      </div> */}
+      </div>
 
       <button className="btn" type="submit">
         SEND
