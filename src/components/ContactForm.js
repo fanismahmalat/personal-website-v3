@@ -21,7 +21,7 @@ const ContactForm = () => {
       }),
     })
       .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      .catch(error => alert("Something went wrong! Refresh and try again."));
 
     e.preventDefault();
   };
@@ -72,7 +72,7 @@ const ContactForm = () => {
           className={`input2 ${msg.length > 0 ? "has-val" : ""}`}
           type="text"
           form="contact-form"
-          name="message"
+          name="msg"
           required
           value={msg}
           onChange={event => setMsg(event.target.value)}
