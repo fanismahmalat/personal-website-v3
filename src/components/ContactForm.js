@@ -21,7 +21,11 @@ const ContactForm = () => {
         ...{ name, email, msg },
       }),
     })
-      .then(() => <Redirect to="/contact-success" />)
+      .then(() => {
+        if (typeof window !== `undefined`)
+          window.location.replace(`/contact-success`);
+        else alert("Form sent successfully!");
+      })
       .catch(error => alert("Something went wrong! Refresh and try again."));
 
     e.preventDefault();
@@ -72,7 +76,6 @@ const ContactForm = () => {
         <textarea
           className={`input2 ${msg.length > 0 ? "has-val" : ""}`}
           type="text"
-          form="contact-form"
           name="msg"
           required
           value={msg}
