@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Redirect } from "@reach/router";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -20,7 +21,7 @@ const ContactForm = () => {
         ...{ name, email, msg },
       }),
     })
-      .then(() => alert("Success!"))
+      .then(() => <Redirect to="/contact-success" />)
       .catch(error => alert("Something went wrong! Refresh and try again."));
 
     e.preventDefault();
