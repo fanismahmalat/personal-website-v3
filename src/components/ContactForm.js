@@ -5,13 +5,36 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
 
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+  };
+
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "Contact Form",
+        ...{ name, email, msg },
+      }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
   return (
     <form
       className="contact-form validate-form"
-      name="Contact"
-      method="POST"
-      data-netlify="true"
-      action="/contact-success"
+      onSubmit={handleSubmit}
+      // name="Contact"
+      // method="POST"
+      // data-netlify={true}
+      // action="/contact-success"
+      // type="application/x-www-form-urlencoded"
     >
       <h1 className="contact2-form-title">Get in touch</h1>
 
