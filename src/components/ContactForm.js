@@ -17,7 +17,7 @@ const ContactForm = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "Contact Form 2",
+        "form-name": "contact-form",
         ...{ name, email, msg },
       }),
     })
@@ -78,7 +78,7 @@ const ContactForm = () => {
         <textarea
           className={`input2 ${msg.length > 0 ? "has-val" : ""}`}
           type="text"
-          name="textarea"
+          name="msg"
           required
           value={msg}
           onChange={event => setMsg(event.target.value)}
