@@ -53,22 +53,6 @@ const ContactForm = () => {
         />
         <span className="focus-input2" data-placeholder="NAME"></span>
       </div>
-
-      <div
-        className="wrap-input2 validate-input"
-        data-validate="Valid email is required: ex@abc.xyz"
-      >
-        <input
-          className={`input2 ${email.length > 0 ? "has-val" : ""}`}
-          type="email"
-          name="email"
-          required
-          value={email}
-          onChange={event => setEmail(event.target.value)}
-        />
-        <span className="focus-input2" data-placeholder="EMAIL"></span>
-      </div>
-
       <div
         className="wrap-input2 validate-input"
         data-validate="Message is required"
@@ -82,6 +66,20 @@ const ContactForm = () => {
           onChange={event => setMsg(event.target.value)}
         ></textarea>
         <span className="focus-input2" data-placeholder="MESSAGE"></span>
+      </div>
+      <div
+        className="wrap-input2 validate-input"
+        data-validate="Valid email is required: ex@abc.xyz"
+      >
+        <input
+          className={`input2 ${email.length > 0 ? "has-val" : ""}`}
+          type="email"
+          name="email"
+          required
+          value={email}
+          onChange={event => setEmail(event.target.value)}
+        />
+        <span className="focus-input2" data-placeholder="EMAIL"></span>
       </div>
 
       <button className="btn" type="submit">
