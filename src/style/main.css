@@ -616,6 +616,17 @@ header nav .wrapper .links-wrapper .links .cta:hover a {
   }
 }
 
+@media (max-width: 500px) {
+  .project-card {
+    min-height: 800px;
+    height: unset;
+  }
+  .project-card .details {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }
+}
+
 .quote {
   margin: 70px auto;
 }

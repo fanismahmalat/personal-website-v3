@@ -136,3 +136,15 @@
     }
   }
 }
+
+@media (max-width: $mobile) {
+  .project-card {
+    min-height: 800px;
+    height: unset;
+
+    .details {
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
+  }
+}
