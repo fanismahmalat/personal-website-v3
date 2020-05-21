@@ -9,10 +9,8 @@ import ContactCard from "../components/ContactCard";
 
 import BackgroundImage from "../images/page_bg.svg";
 
-const Work = ({ pageContext }) => {
+const Blog = ({ pageContext }) => {
   const { group } = pageContext;
-
-  console.log(group);
 
   let blogCards = group.map((article, i) => {
     return <BlogCard article={article.node} key={article.node.id} />;
@@ -53,4 +51,4 @@ const Work = ({ pageContext }) => {
   );
 };
 
-export default Work;
+export default Blog;

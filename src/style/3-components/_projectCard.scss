@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  justify-items: center;
   box-shadow: 0 0 30px -10px rgba(0, 0, 0, 0.25);
   margin: 80px 0;
 
@@ -12,6 +11,7 @@
     color: $blue;
     max-width: 70%;
     margin-bottom: 15px;
+    margin-left: 12%;
 
     .tags {
       display: inline-block;

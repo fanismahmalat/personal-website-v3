@@ -11,8 +11,6 @@ const Pagination = ({ pageContext }) => {
   const [styles, setStyles] = useState();
   const [responsivePages, setResponsivePages] = useState();
 
-  console.log(responsivePages);
-
   let previousPagePath = first
     ? false
     : index === 2

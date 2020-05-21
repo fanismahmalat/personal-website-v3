@@ -1,4 +1,5 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -10,6 +11,42 @@ import ContactCard from "../components/ContactCard";
 import BackgroundImage from "../images/page_bg.svg";
 
 const Work = () => {
+  const data = useStaticQuery(graphql`
+    query WorkProjects {
+      projects: allContentfulProjects(
+        sort: { fields: createdAt, order: DESC }
+      ) {
+        edges {
+          node {
+            id
+            slug
+            title
+            createdAt
+            live_demo
+            description {
+              description
+            }
+            featured_image {
+              fluid {
+                srcSet
+              }
+            }
+            case_study_images {
+              fluid {
+                srcSet
+              }
+            }
+            tags
+          }
+        }
+      }
+    }
+  `);
+
+  let projectCards = data.projects.edges.map(project => {
+    return <ProjectCard project={project.node} key={project.node.id} />;
+  });
+
   return (
     <Layout pageTitle="work">
       <SEO pageTitle="Work" />
@@ -32,15 +69,7 @@ const Work = () => {
           </div>
         </section>
 
-        <section className="projects">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-        </section>
+        <section className="projects">{projectCards}</section>
 
         <BlogCTA />
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -15,6 +16,43 @@ import HeroIllustration from "../images/homepage_hero.svg";
 import MouseIcon from "../images/mouse_icon.svg";
 
 const Homepage = () => {
+  const data = useStaticQuery(graphql`
+    query HomeProjects {
+      projects: allContentfulProjects(
+        sort: { fields: createdAt, order: DESC }
+        limit: 2
+      ) {
+        edges {
+          node {
+            id
+            slug
+            title
+            createdAt
+            live_demo
+            description {
+              description
+            }
+            featured_image {
+              fluid {
+                srcSet
+              }
+            }
+            case_study_images {
+              fluid {
+                srcSet
+              }
+            }
+            tags
+          }
+        }
+      }
+    }
+  `);
+
+  let projectCards = data.projects.edges.map(project => {
+    return <ProjectCard project={project.node} key={project.node.id} />;
+  });
+
   const handleClick = e => {
     const projectsSection = document.querySelector(".projects").offsetTop;
 
@@ -66,7 +104,7 @@ const Homepage = () => {
         </section>
 
         <section className="projects">
-          <ProjectCard />
+          {projectCards}
           <div className="btn-wrapper">
             <Button
               type="bordered"
