@@ -55,6 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
                 featured_image {
                   fluid {
                     srcSet
+                    src
                   }
                 }
                 case_study_images {
@@ -80,7 +81,7 @@ exports.createPages = ({ graphql, actions }) => {
             createdAt: projects[i].node.createdAt,
             live_demo: projects[i].node.live_demo,
             body: projects[i].node.description.description,
-            featuredImage: projects[i].node.featured_image.fluid,
+            featured_image: projects[i].node.featured_image.fluid,
             case_study_images: projects[i].node.case_study_images.fluid,
             tags: projects[i].node.tags,
             id: projects[i].node.id,
@@ -113,7 +114,7 @@ exports.createPages = ({ graphql, actions }) => {
             slug: blogArticles[i].node.slug,
             createdAt: blogArticles[i].node.createdAt,
             body: blogArticles[i].node.body.body,
-            featuredImage: blogArticles[i].node.featured_image.fluid,
+            featured_image: blogArticles[i].node.featured_image.fluid,
             id: blogArticles[i].node.id,
           };
 

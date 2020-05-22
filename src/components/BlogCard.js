@@ -5,7 +5,8 @@ import Button from "./Button";
 const BlogCard = ({ article }) => {
   const slug = article.slug;
   const title = article.title;
-  const featured_image = article.featured_image.fluid.srcSet;
+  const featured_image =
+    article.featured_image.srcSet || article.featured_image.fluid.srcSet;
   const date = article.createdAt;
 
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 
 import Button from "./Button";
 
@@ -20,8 +20,10 @@ const BlogCTA = () => {
     }
   `);
 
-  let blog = data.blogCTA.edges.filter(edge => {
-    return edge.node.identifier === "blog";
+  let blog = {};
+
+  data.blogCTA.edges.map(edge => {
+    if (edge.node.identifier === "blog") return (blog = edge.node);
   });
 
   return (
@@ -30,7 +32,7 @@ const BlogCTA = () => {
         <div className="background" />
 
         <div className="headline">
-          <p>{blog[0].node.headline}</p>
+          <p>{blog.headline}</p>
           <Button link="/blog" type="solid" placeholder="Read my blog" />
         </div>
 
