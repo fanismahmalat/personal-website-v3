@@ -1,8 +1,12 @@
 import React from "react";
+
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
-const Project = ({ location, pageContext }) => {
+import ProjectCard from "../components/ProjectCard";
+import ContactCard from "../components/ContactCard";
+
+const Project = ({ pageContext }) => {
   let title = pageContext.project.title;
   let description = pageContext.project.description;
   let date = pageContext.project.createdAt;
@@ -12,7 +16,7 @@ const Project = ({ location, pageContext }) => {
 
   let SeoImage =
     pageContext.project.featured_image &&
-    pageContext.project.featured_image.fluid.src;
+    pageContext.project.featured_image.src;
 
   return (
     <Layout pageTitle="project">
@@ -22,7 +26,12 @@ const Project = ({ location, pageContext }) => {
         pageImage={SeoImage}
       />
 
-      <div className="content">{title}</div>
+      <section className="page-wrapper">
+        <p>Keep reading...</p>
+        <ProjectCard project={pageContext.randomProject} />
+      </section>
+
+      <ContactCard />
     </Layout>
   );
 };

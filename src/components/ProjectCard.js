@@ -5,8 +5,9 @@ import Button from "./Button";
 const ProjectCard = ({ project }) => {
   let slug = project.slug;
   let title = project.title;
-  let description = project.description.description;
-  let featured_image = project.featured_image.fluid.srcSet;
+  let description = project.description.description || project.description;
+  let featured_image =
+    project.featured_image.srcSet || project.featured_image.fluid.srcSet;
   let tagsArr = project.tags;
 
   let tags = tagsArr.map((tag, i) => {

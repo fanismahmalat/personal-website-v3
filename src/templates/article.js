@@ -4,11 +4,13 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 
 import BackgroundImage from "../images/page_bg.svg";
+import Button from "../components/Button";
 import SocialSection from "../components/SocialMedia/SocialSection";
 import ContactCard from "../components/ContactCard";
 import BlogCard from "../components/BlogCard";
 
-const Article = ({ location, pageContext }) => {
+const Article = ({ pageContext }) => {
+  // Current article
   let title = pageContext.article.title;
   let body = pageContext.article.body;
   let date = pageContext.article.createdAt;
@@ -38,10 +40,12 @@ const Article = ({ location, pageContext }) => {
           <h1 className="title">{title}</h1>
 
           <p className="text" dangerouslySetInnerHTML={{ __html: body }}></p>
+
+          <Button type="solid" placeholder="<< All stories" link="/blog" />
         </div>
 
         <p>Keep reading...</p>
-        <BlogCard article={pageContext.article} />
+        <BlogCard article={pageContext.randomArticle} />
       </section>
 
       <SocialSection />

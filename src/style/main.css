@@ -1974,6 +1974,20 @@ footer .footer-inner .logo {
   line-height: 1.8;
 }
 
+.page-article .article-body .btn {
+  margin-top: 50px;
+  display: inline-block;
+  background-color: #f1f1f1;
+  border-color: #f1f1f1;
+  color: gray;
+}
+
+.page-article .article-body .btn:hover {
+  background-color: transparent;
+  border-color: #11638c;
+  color: #11638c;
+}
+
 .page-article .blog-card {
   margin-top: 15px;
 }
@@ -1989,6 +2003,9 @@ footer .footer-inner .logo {
     min-height: 800px;
     -webkit-transform: scaleX(2);
             transform: scaleX(2);
+  }
+  .page-article .featured-image {
+    margin-top: 110px;
   }
 }
 

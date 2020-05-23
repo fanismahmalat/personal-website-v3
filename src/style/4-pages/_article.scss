@@ -46,6 +46,21 @@
       width: 100%;
       line-height: 1.8;
     }
+
+    .btn {
+      margin-top: 50px;
+      display: inline-block;
+      background-color: #f1f1f1;
+      border-color: #f1f1f1;
+      color: gray;
+
+      &:hover {
+        // color: ;
+        background-color: transparent;
+        border-color: $blue;
+        color: $blue;
+      }
+    }
   }
 
   .blog-card {
@@ -63,6 +78,10 @@
       top: -80px;
       min-height: 800px;
       transform: scaleX(2);
+    }
+
+    .featured-image {
+      margin-top: 110px;
     }
   }
 }

@@ -74,24 +74,48 @@ exports.createPages = ({ graphql, actions }) => {
         // Creating a page for each project - WORK PAGE
         let projects = result.data.projects.edges;
 
+        // Returns a random project from projects array
+        const randomProjectGenerator = current => {
+          let index;
+
+          do {
+            index = Math.floor(Math.random() * projects.length);
+          } while (index === current);
+
+          return {
+            title: projects[index].node.title,
+            slug: projects[index].node.slug,
+            createdAt: projects[index].node.createdAt,
+            live_demo: projects[index].node.live_demo,
+            description: projects[index].node.description.description,
+            featured_image: projects[index].node.featured_image.fluid,
+            case_study_images: projects[index].node.case_study_images.fluid,
+            tags: projects[index].node.tags,
+            id: projects[index].node.id,
+          };
+        };
+
         for (let i = 0; i < projects.length; i++) {
           let project = {
             title: projects[i].node.title,
             slug: projects[i].node.slug,
             createdAt: projects[i].node.createdAt,
             live_demo: projects[i].node.live_demo,
-            body: projects[i].node.description.description,
+            description: projects[i].node.description.description,
             featured_image: projects[i].node.featured_image.fluid,
             case_study_images: projects[i].node.case_study_images.fluid,
             tags: projects[i].node.tags,
             id: projects[i].node.id,
           };
 
+          let randomProject = randomProjectGenerator(i);
+
           createPage({
             path: `/projects/${projects[i].node.slug}`,
             component: projectTemplate,
             context: {
               project,
+              randomProject,
             },
           });
         }
@@ -108,6 +132,24 @@ exports.createPages = ({ graphql, actions }) => {
           context: {},
         });
 
+        // Returns a random article from blogArticles array
+        const randomArticleGenerator = current => {
+          let index;
+
+          do {
+            index = Math.floor(Math.random() * blogArticles.length);
+          } while (index === current);
+
+          return {
+            title: blogArticles[index].node.title,
+            slug: blogArticles[index].node.slug,
+            createdAt: blogArticles[index].node.createdAt,
+            body: blogArticles[index].node.body.body,
+            featured_image: blogArticles[index].node.featured_image.fluid,
+            id: blogArticles[index].node.id,
+          };
+        };
+
         for (let i = 0; i < blogArticles.length; i++) {
           let article = {
             title: blogArticles[i].node.title,
@@ -118,11 +160,14 @@ exports.createPages = ({ graphql, actions }) => {
             id: blogArticles[i].node.id,
           };
 
+          let randomArticle = randomArticleGenerator(i);
+
           createPage({
             path: `/articles/${blogArticles[i].node.slug}`,
             component: articleTemplate,
             context: {
               article,
+              randomArticle,
             },
           });
         }
