@@ -103,7 +103,7 @@ exports.createPages = ({ graphql, actions }) => {
             live_demo: projects[i].node.live_demo,
             description: projects[i].node.description.description,
             featured_image: projects[i].node.featured_image.fluid,
-            case_study_images: projects[i].node.case_study_images.fluid,
+            case_study_images: projects[i].node.case_study_images,
             tags: projects[i].node.tags,
             id: projects[i].node.id,
           };

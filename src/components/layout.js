@@ -5,6 +5,7 @@ import { useSiteMetadata } from "../hooks/useSiteMetadata";
 import Header from "./Header";
 
 import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 
 const Layout = ({ children, pageTitle }) => {
   const { siteTitle } = useSiteMetadata();
@@ -15,6 +16,7 @@ const Layout = ({ children, pageTitle }) => {
       <main className={`page-${pageTitle}`}>{children}</main>
 
       <Footer />
+      <ScrollToTop />
     </>
   );
 };
