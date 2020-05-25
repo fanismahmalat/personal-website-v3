@@ -47,7 +47,7 @@ const ContactForm = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": "Contact Form",
+        "form-name": "Gatsby Contact Form",
         name,
         email,
         userMessage,
