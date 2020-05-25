@@ -1,9 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [msg, setMsg] = useState("");
+
+  useEffect(() => {
+    const processForm = form => {
+      const data = new FormData(form);
+
+      data.append("form-name", "Contact Form");
+      fetch("/", {
+        method: "POST",
+        body: data,
+      })
+        .then(() => {
+          if (typeof window !== `undefined`)
+            window.location.replace(`/contact-success`);
+          else alert("Form sent successfully!");
+        })
+        .catch(error => alert("Something went wrong! Refresh and try again."));
+    };
+
+    const emailForm = document.querySelector(".contact-form");
+
+    if (emailForm) {
+      emailForm.addEventListener("submit", e => {
+        e.preventDefault();
+        processForm(emailForm);
+      });
+    }
+  }, []);
 
   const encode = data => {
     return Object.keys(data)
@@ -13,6 +40,8 @@ const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+
+    const data = new FormData(e);
 
     fetch("/", {
       method: "POST",
@@ -35,7 +64,7 @@ const ContactForm = () => {
   return (
     <form
       className="contact-form validate-form"
-      onSubmit={handleSubmit}
+      // onSubmit={handleSubmit}
       id="contact-form"
     >
       <h1 className="contact2-form-title">Get in touch</h1>
