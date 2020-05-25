@@ -9,7 +9,7 @@ const ContactForm = () => {
     const processForm = form => {
       const data = new FormData(form);
 
-      data.append("form-name", "Contact Form");
+      data.append("form-name", "Gatsby Contact Form");
       fetch("/", {
         method: "POST",
         body: data,
