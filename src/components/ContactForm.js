@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Redirect } from "@reach/router";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -13,6 +12,8 @@ const ContactForm = () => {
   };
 
   const handleSubmit = e => {
+    e.preventDefault();
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -29,8 +30,6 @@ const ContactForm = () => {
         else alert("Form sent successfully!");
       })
       .catch(error => alert("Something went wrong! Refresh and try again."));
-
-    e.preventDefault();
   };
 
   return (
@@ -79,7 +78,7 @@ const ContactForm = () => {
       >
         <textarea
           className={`input2 ${msg.length > 0 ? "has-val" : ""}`}
-          type="text"
+          // type="text"
           name="msg"
           required
           value={msg}
