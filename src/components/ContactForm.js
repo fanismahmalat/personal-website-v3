@@ -105,14 +105,14 @@ const ContactForm = () => {
         className="wrap-input2 validate-input"
         data-validate="Message is required"
       >
-        <textarea
+        <input
           className={`input2 ${msg.length > 0 ? "has-val" : ""}`}
-          // type="text"
+          type="text"
           name="msg"
           required
           value={msg}
           onChange={event => setMsg(event.target.value)}
-        ></textarea>
+        ></input>
         <span className="focus-input2" data-placeholder="MESSAGE"></span>
       </div>
 
