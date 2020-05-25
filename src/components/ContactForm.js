@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [msg, setMsg] = useState("");
+  const [userMessage, setUserMessage] = useState("");
 
   useEffect(() => {
     const processForm = form => {
@@ -50,7 +50,7 @@ const ContactForm = () => {
         "form-name": "Contact Form",
         name,
         email,
-        msg,
+        userMessage,
       }),
     })
       .then(() => {
@@ -88,6 +88,21 @@ const ContactForm = () => {
 
       <div
         className="wrap-input2 validate-input"
+        data-validate="Message is required"
+      >
+        <input
+          className={`input2 ${userMessage.length > 0 ? "has-val" : ""}`}
+          type="text"
+          name="userMessage"
+          required
+          value={userMessage}
+          onChange={event => setUserMessage(event.target.value)}
+        />
+        <span className="focus-input2" data-placeholder="MESSAGE"></span>
+      </div>
+
+      <div
+        className="wrap-input2 validate-input"
         data-validate="Valid email is required: ex@abc.xyz"
       >
         <input
@@ -99,21 +114,6 @@ const ContactForm = () => {
           onChange={event => setEmail(event.target.value)}
         />
         <span className="focus-input2" data-placeholder="EMAIL"></span>
-      </div>
-
-      <div
-        className="wrap-input2 validate-input"
-        data-validate="Message is required"
-      >
-        <input
-          className={`input2 ${msg.length > 0 ? "has-val" : ""}`}
-          type="text"
-          name="msg"
-          required
-          value={msg}
-          onChange={event => setMsg(event.target.value)}
-        ></input>
-        <span className="focus-input2" data-placeholder="MESSAGE"></span>
       </div>
 
       <button className="btn" type="submit">
