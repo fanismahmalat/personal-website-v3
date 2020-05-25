@@ -3,40 +3,11 @@ import React, { useState, useEffect } from "react";
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [userMessage, setUserMessage] = useState("");
-
-  // const encode = data => {
-  //   return Object.keys(data)
-  //     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-  //     .join("&");
-  // };
-
-  // const handleSubmit = e => {
-  //   e.preventDefault();
-
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({
-  //       "form-name": "Gatsby Contact Form",
-  //       name,
-  //       userMessage,
-  //       email,
-  //     }),
-  //   })
-  //     .then(() => {
-  //       if (typeof window !== `undefined`)
-  //         window.location.replace(`/contact-success`);
-  //       else alert("Form sent successfully!");
-  //     })
-  //     .catch(error => alert("Something went wrong! Refresh and try again."));
-  // };
+  const [message, setMessage] = useState("");
 
   return (
     <form
       className="contact-form validate-form"
-      // onSubmit={handleSubmit}
-      // data-netlify="true"
       method="post"
       action="https://www.flexyform.com/f/328f87afe1c7d142eef5b3aad9adb5c0f78944ba"
       id="contact-form"
@@ -80,11 +51,11 @@ const ContactForm = () => {
         data-validate="Message is required"
       >
         <textarea
-          className={`input2 ${userMessage.length > 0 ? "has-val" : ""}`}
-          name="userMessage"
+          className={`input2 ${message.length > 0 ? "has-val" : ""}`}
+          name="message"
           required
-          value={userMessage}
-          onChange={event => setUserMessage(event.target.value)}
+          value={message}
+          onChange={event => setMessage(event.target.value)}
         />
         <span className="focus-input2" data-placeholder="MESSAGE"></span>
       </div>
