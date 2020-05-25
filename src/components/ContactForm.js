@@ -8,8 +8,8 @@ const ContactForm = () => {
   useEffect(() => {
     const processForm = form => {
       const data = new FormData(form);
-
       data.append("form-name", "Gatsby Contact Form");
+
       fetch("/", {
         method: "POST",
         body: data,
@@ -24,12 +24,12 @@ const ContactForm = () => {
 
     const emailForm = document.querySelector(".contact-form");
 
-    if (emailForm) {
-      emailForm.addEventListener("submit", e => {
-        e.preventDefault();
-        processForm(emailForm);
-      });
-    }
+    // if (emailForm) {
+    //   emailForm.addEventListener("submit", e => {
+    //     e.preventDefault();
+    //     processForm(emailForm);
+    //   });
+    // }
   }, []);
 
   const encode = data => {
@@ -41,16 +41,14 @@ const ContactForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
 
-    const data = new FormData(e);
-
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "Gatsby Contact Form",
         name,
-        email,
         userMessage,
+        email,
       }),
     })
       .then(() => {
@@ -64,7 +62,8 @@ const ContactForm = () => {
   return (
     <form
       className="contact-form validate-form"
-      // onSubmit={handleSubmit}
+      onSubmit={handleSubmit}
+      data-netlify="true"
       id="contact-form"
     >
       <h1 className="contact2-form-title">Get in touch</h1>
