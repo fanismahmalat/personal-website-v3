@@ -5,65 +5,40 @@ const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [userMessage, setUserMessage] = useState("");
 
-  useEffect(() => {
-    const processForm = form => {
-      const data = new FormData(form);
-      data.append("form-name", "Gatsby Contact Form");
+  // const encode = data => {
+  //   return Object.keys(data)
+  //     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+  //     .join("&");
+  // };
 
-      fetch("/", {
-        method: "POST",
-        body: data,
-      })
-        .then(() => {
-          if (typeof window !== `undefined`)
-            window.location.replace(`/contact-success`);
-          else alert("Form sent successfully!");
-        })
-        .catch(error => alert("Something went wrong! Refresh and try again."));
-    };
+  // const handleSubmit = e => {
+  //   e.preventDefault();
 
-    const emailForm = document.querySelector(".contact-form");
-
-    // if (emailForm) {
-    //   emailForm.addEventListener("submit", e => {
-    //     e.preventDefault();
-    //     processForm(emailForm);
-    //   });
-    // }
-  }, []);
-
-  const encode = data => {
-    return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "Gatsby Contact Form",
-        name,
-        userMessage,
-        email,
-      }),
-    })
-      .then(() => {
-        if (typeof window !== `undefined`)
-          window.location.replace(`/contact-success`);
-        else alert("Form sent successfully!");
-      })
-      .catch(error => alert("Something went wrong! Refresh and try again."));
-  };
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({
+  //       "form-name": "Gatsby Contact Form",
+  //       name,
+  //       userMessage,
+  //       email,
+  //     }),
+  //   })
+  //     .then(() => {
+  //       if (typeof window !== `undefined`)
+  //         window.location.replace(`/contact-success`);
+  //       else alert("Form sent successfully!");
+  //     })
+  //     .catch(error => alert("Something went wrong! Refresh and try again."));
+  // };
 
   return (
     <form
       className="contact-form validate-form"
-      onSubmit={handleSubmit}
-      data-netlify="true"
+      // onSubmit={handleSubmit}
+      // data-netlify="true"
+      method="post"
+      action="https://www.flexyform.com/f/328f87afe1c7d142eef5b3aad9adb5c0f78944ba"
       id="contact-form"
     >
       <h1 className="contact2-form-title">Get in touch</h1>
@@ -87,21 +62,6 @@ const ContactForm = () => {
 
       <div
         className="wrap-input2 validate-input"
-        data-validate="Message is required"
-      >
-        <input
-          className={`input2 ${userMessage.length > 0 ? "has-val" : ""}`}
-          type="text"
-          name="userMessage"
-          required
-          value={userMessage}
-          onChange={event => setUserMessage(event.target.value)}
-        />
-        <span className="focus-input2" data-placeholder="MESSAGE"></span>
-      </div>
-
-      <div
-        className="wrap-input2 validate-input"
         data-validate="Valid email is required: ex@abc.xyz"
       >
         <input
@@ -113,6 +73,20 @@ const ContactForm = () => {
           onChange={event => setEmail(event.target.value)}
         />
         <span className="focus-input2" data-placeholder="EMAIL"></span>
+      </div>
+
+      <div
+        className="wrap-input2 validate-input"
+        data-validate="Message is required"
+      >
+        <textarea
+          className={`input2 ${userMessage.length > 0 ? "has-val" : ""}`}
+          name="userMessage"
+          required
+          value={userMessage}
+          onChange={event => setUserMessage(event.target.value)}
+        />
+        <span className="focus-input2" data-placeholder="MESSAGE"></span>
       </div>
 
       <button className="btn" type="submit">
