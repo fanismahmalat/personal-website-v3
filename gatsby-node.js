@@ -53,14 +53,15 @@ exports.createPages = ({ graphql, actions }) => {
                   description
                 }
                 featured_image {
-                  fluid {
+                  fluid(quality: 100) {
                     srcSet
                     src
                   }
                 }
                 case_study_images {
-                  fluid {
+                  fluid(quality: 100) {
                     srcSet
+                    src
                   }
                 }
                 tags

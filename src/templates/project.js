@@ -25,7 +25,7 @@ const Project = ({ pageContext }) => {
     <img
       key={img.fluid.srcSet}
       srcSet={img.fluid.srcSet}
-      sizes="(max-width: 500px) 400px, (max-width: 800px) 800px, 1600px"
+      sizes="(max-width: 500px) 400px, (max-width: 1400px) 1400px, 1600px"
       alt="Case study"
       className="images"
     />
