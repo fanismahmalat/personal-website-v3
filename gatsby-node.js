@@ -59,7 +59,7 @@ exports.createPages = ({ graphql, actions }) => {
                   }
                 }
                 case_study_images {
-                  fluid(quality: 100) {
+                  fluid(maxWidth: 1400, quality: 92) {
                     srcSet
                     src
                   }
