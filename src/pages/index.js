@@ -33,13 +33,15 @@ const Homepage = () => {
               description
             }
             featured_image {
-              fluid {
+              fluid(maxWidth: 1000, quality: 88) {
                 srcSet
+                src
               }
             }
             case_study_images {
-              fluid {
+              fluid(maxWidth: 1400, quality: 88) {
                 srcSet
+                src
               }
             }
             tags

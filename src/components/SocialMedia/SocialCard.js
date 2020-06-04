@@ -38,7 +38,12 @@ const SocialCard = ({
       <div className="card-inner">
         <div className="icon">{socialIcon}</div>
         <p className="body">{body.body}</p>
-        <a href={profile_url} className="link-to-profile" target="_blank">
+        <a
+          href={profile_url}
+          className="link-to-profile"
+          target="_blank"
+          rel="noopener"
+        >
           {account_username}
         </a>
       </div>
