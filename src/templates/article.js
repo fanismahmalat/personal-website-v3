@@ -15,7 +15,7 @@ const Article = ({ pageContext }) => {
   let body = pageContext.article.body;
   let date = pageContext.article.createdAt;
   let featured_image = pageContext.article.featured_image
-    ? pageContext.article.featured_image.srcSet
+    ? pageContext.article.featured_image.src
     : "/defaultFeaturedImage.png";
 
   let SeoImage =
@@ -29,8 +29,8 @@ const Article = ({ pageContext }) => {
 
       <section className="page-wrapper">
         <img
-          srcSet={featured_image}
-          sizes="(max-width: 500px) 400px, (max-width: 800px) 800px, 1600px"
+          src={featured_image}
+          // sizes="(max-width: 500px) 400px, (max-width: 800px) 800px, 1600px"
           alt="Article featured image"
           className="featured-image"
         />

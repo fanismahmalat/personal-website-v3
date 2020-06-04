@@ -5,8 +5,7 @@ import Button from "./Button";
 const BlogCard = ({ article }) => {
   const slug = article.slug;
   const title = article.title;
-  const featured_image =
-    article.featured_image.srcSet || article.featured_image.fluid.srcSet;
+  const featured_image = article.featured_image.fluid.src;
   const date = article.createdAt;
 
   return (
@@ -22,8 +21,8 @@ const BlogCard = ({ article }) => {
       </div>
 
       <img
-        srcSet={featured_image}
-        sizes="(max-width: 500px) 400px, (max-width: 800px) 800px, 1600px"
+        src={featured_image}
+        // sizes="(max-width: 500px) 400px, (max-width: 800px) 800px, 1600px"
         alt="Article image"
       />
     </div>

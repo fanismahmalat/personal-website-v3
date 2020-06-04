@@ -13,6 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
     const projectTemplate = path.resolve("src/templates/project.js");
     const articleTemplate = path.resolve("src/templates/article.js");
     const blogTemplate = path.resolve("src/templates/blog.js");
+    const workTemplate = path.resolve("src/templates/work.js");
 
     // Queries
     resolve(
@@ -27,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
                 slug
                 title
                 featured_image {
-                  fluid {
+                  fluid(maxWidth: 1600, quality: 78) {
                     srcSet
                     src
                   }
@@ -53,16 +54,15 @@ exports.createPages = ({ graphql, actions }) => {
                   description
                 }
                 featured_image {
-                  fluid(quality: 100) {
+                  fluid(maxWidth: 1000, quality: 88) {
                     srcSet
                     src
                   }
                 }
                 case_study_images {
-                  fluid(maxWidth: 1400, quality: 92) {
+                  fluid(maxWidth: 1400, quality: 88) {
                     srcSet
                     src
-                    srcWebp
                   }
                 }
                 tags
@@ -73,8 +73,19 @@ exports.createPages = ({ graphql, actions }) => {
       `).then(result => {
         if (result.errors) reject(result.errors);
 
-        // Creating a page for each project - WORK PAGE
+        // Creating WORK PAGE
         let projects = result.data.projects.edges;
+
+        // Limiting projects to 5
+        let limitProjects = projects.slice(0, 4);
+
+        createPage({
+          path: `/work`,
+          component: workTemplate,
+          context: {
+            projects: limitProjects,
+          },
+        });
 
         // Returns a random project from projects array
         const randomProjectGenerator = current => {
@@ -89,8 +100,8 @@ exports.createPages = ({ graphql, actions }) => {
             slug: projects[index].node.slug,
             createdAt: projects[index].node.createdAt,
             live_demo: projects[index].node.live_demo,
-            description: projects[index].node.description.description,
-            featured_image: projects[index].node.featured_image.fluid,
+            description: projects[index].node.description,
+            featured_image: projects[index].node.featured_image,
             case_study_images: projects[index].node.case_study_images.fluid,
             tags: projects[index].node.tags,
             id: projects[index].node.id,
@@ -122,7 +133,7 @@ exports.createPages = ({ graphql, actions }) => {
           });
         }
 
-        // Creating a page for each project - BLOG PAGE
+        // Creating BLOG PAGE
         let blogArticles = result.data.blogArticles.edges;
 
         createPaginatedPages({
@@ -147,7 +158,7 @@ exports.createPages = ({ graphql, actions }) => {
             slug: blogArticles[index].node.slug,
             createdAt: blogArticles[index].node.createdAt,
             body: blogArticles[index].node.body.body,
-            featured_image: blogArticles[index].node.featured_image.fluid,
+            featured_image: blogArticles[index].node.featured_image,
             id: blogArticles[index].node.id,
           };
         };
@@ -164,6 +175,7 @@ exports.createPages = ({ graphql, actions }) => {
 
           let randomArticle = randomArticleGenerator(i);
 
+          // Creates a page for each article and passing the article and a random one
           createPage({
             path: `/articles/${blogArticles[i].node.slug}`,
             component: articleTemplate,

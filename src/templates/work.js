@@ -10,40 +10,10 @@ import ContactCard from "../components/ContactCard";
 
 import BackgroundImage from "../images/page_bg.svg";
 
-const Work = () => {
-  const data = useStaticQuery(graphql`
-    query WorkProjects {
-      projects: allContentfulProjects(
-        sort: { fields: createdAt, order: DESC }
-      ) {
-        edges {
-          node {
-            id
-            slug
-            title
-            createdAt
-            live_demo
-            description {
-              description
-            }
-            featured_image {
-              fluid {
-                srcSet
-              }
-            }
-            case_study_images {
-              fluid {
-                srcSet
-              }
-            }
-            tags
-          }
-        }
-      }
-    }
-  `);
+const Work = ({ pageContext }) => {
+  console.log(pageContext);
 
-  let projectCards = data.projects.edges.map(project => {
+  let projectCards = pageContext.projects.map(project => {
     return <ProjectCard project={project.node} key={project.node.id} />;
   });
 
@@ -64,7 +34,7 @@ const Work = () => {
               On this page you can find some indicative of my work. I love
               combining Frontend and Backend technologies just to make sure
               everything is on spot. I love minimal and polished designs and
-              make sure my clients get the best experience.{" "}
+              make sure my clients get the best experience.
             </p>
           </div>
         </section>

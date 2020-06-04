@@ -1,7 +1,6 @@
 import React from "react";
 
 import { GoLinkExternal } from "react-icons/go";
-import Img from "gatsby-image";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -25,10 +24,9 @@ const Project = ({ pageContext }) => {
   let case_study_images = pageContext.project.case_study_images.map(img => (
     <img
       key={img.fluid.srcSet}
-      // srcSet={img.fluid.srcSet}
       src={img.fluid.src}
-      src={img.fluid.srcWebp}
-      // sizes="(max-width: 1400px) 100vw, 1400px"
+      // srcSet={img.fluid.srcSet}
+      // sizes="(max-width: 1400px) 100vw"
       alt="Case study"
       className="images"
     />

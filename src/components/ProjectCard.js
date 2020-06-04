@@ -5,9 +5,8 @@ import Button from "./Button";
 const ProjectCard = ({ project }) => {
   let slug = project.slug;
   let title = project.title;
-  let description = project.description.description || project.description;
-  let featured_image =
-    project.featured_image.srcSet || project.featured_image.fluid.srcSet;
+  let description = project.description.description;
+  let featured_image = project.featured_image.fluid.src;
   let tagsArr = project.tags;
 
   let tags = tagsArr.map((tag, i) => {
@@ -15,6 +14,7 @@ const ProjectCard = ({ project }) => {
     else return <li key={tag}>{tag},</li>;
   });
 
+  console.log(project);
   return (
     <div className="project-card">
       <div className="details">
@@ -31,8 +31,8 @@ const ProjectCard = ({ project }) => {
       </div>
 
       <img
-        srcSet={featured_image}
-        sizes="(max-width: 500px) 400px, (max-width: 800px) 800px, 1600px"
+        src={featured_image}
+        // sizes="(max-width: 800px) 800px"
         alt="Project featured image"
       />
     </div>
