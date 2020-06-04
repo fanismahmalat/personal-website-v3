@@ -26,6 +26,7 @@ const Project = ({ pageContext }) => {
     <img
       key={img.fluid.srcSet}
       // srcSet={img.fluid.srcSet}
+      src={img.fluid.src}
       src={img.fluid.srcWebp}
       // sizes="(max-width: 1400px) 100vw, 1400px"
       alt="Case study"
