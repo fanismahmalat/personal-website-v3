@@ -62,6 +62,7 @@ exports.createPages = ({ graphql, actions }) => {
                   fluid(maxWidth: 1400, quality: 92) {
                     srcSet
                     src
+                    srcWebp
                   }
                 }
                 tags
