@@ -191,3 +191,13 @@ exports.createPages = ({ graphql, actions }) => {
     );
   });
 };
+
+exports.sourceNodes = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type ContentfulProjects implements Node @infer {
+      live_demo: String
+    }
+  `;
+  createTypes(typeDefs);
+};
